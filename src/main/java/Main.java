@@ -1,6 +1,8 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-
     }
 
     public static void function2 () {
@@ -20,6 +22,31 @@ public class Main {
         CalculationUtil.calculate1(generalObject2);
         System.out.println(getResult(generalObject2));
     }
+    
+    public static void function3 () {
+        College college = new College(100);
+        List<Student> fillThisList = null;
+        college.populateWithHigherThanNumber1(fillThisList, 60);
+    }
+
+    public static void function4 () {
+        College college = new College(100);
+        List<Student> fillThisList = null;
+        college.populateWithHigherThanNumber2(fillThisList, 60);
+    }
+    
+    public static void function5 () {
+        College college = new College(100);
+        List<Student> fillThisList = new ArrayList<>();
+        college.populateWithHigherThanNumber1(fillThisList, 60);
+    }
+
+    public static void function6 () {
+        College college = new College(100);
+        List<Student> fillThisList = new ArrayList<>();
+        college.populateWithHigherThanNumber2(fillThisList, 60);
+    }
+
 
     public static String getResult (GeneralObject generalObject) {
         return switch (generalObject.getValue()) {
